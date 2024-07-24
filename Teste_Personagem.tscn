@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://yiqltl6yelhd"]
+
+[ext_resource type="Texture2D" uid="uid://dqgwdha0dych4" path="res://addons/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Red/Warrior_Red.png" id="1_lvhg1"]
+[ext_resource type="PackedScene" uid="uid://b6upv68ug6jvd" path="res://Prefab/player.tscn" id="2_ke46u"]
+
+[node name="TestePersonagem" type="Node2D"]
+
+[node name="WarriorRed2" type="Sprite2D" parent="."]
+position = Vector2(1335, 484)
+texture = ExtResource("1_lvhg1")
+
+[node name="Player" parent="." instance=ExtResource("2_ke46u")]
