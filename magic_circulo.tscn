@@ -1,0 +1,225 @@
+[gd_scene load_steps=10 format=3 uid="uid://dn353qij3g8kj"]
+
+[ext_resource type="Texture2D" uid="uid://clgffrag8a3qe" path="res://addons/PNG (Transparent)/circle_03.png" id="1_30ggm"]
+[ext_resource type="Script" path="res://magic_circuloScript.gd" id="1_n247d"]
+[ext_resource type="Texture2D" uid="uid://bkoq8c41twx1y" path="res://addons/PNG (Transparent)/light_03.png" id="2_00van"]
+[ext_resource type="Texture2D" uid="uid://banp62epksonf" path="res://addons/PNG (Transparent)/magic_03.png" id="3_7km4j"]
+
+[sub_resource type="Animation" id="Animation_5n3vf"]
+resource_name = "Basica"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("imagens/Magic03:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 3.14159, 6.28319]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("imagens:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 4.7, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1, 1), Vector2(1, 1), Vector2(1e-05, 1e-05)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("imagens/Light03:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.345098, 0.286275, 1, 0), Color(0.345098, 0.286275, 1, 0.980392), Color(0.345098, 0.286275, 1, 0), Color(0.345098, 0.286275, 1, 0.980392), Color(0.345098, 0.286275, 1, 0), Color(0.345098, 0.286275, 1, 0.980392)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("imagens/raio do efeito:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3, 1, 2, 3, 4, 4.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.872665, 0.0, -0.872665, -1.74533, -2.61799, -0.738408]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("imagens/Light03:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.3, 1, 1.9, 2.5, 3.2, 4.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(1.1, 1.1), Vector2(0.5, 0.5), Vector2(0.5, 0.5), Vector2(1.1, 1.1), Vector2(0.5, 0.5)]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.7, 4.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"deal_damage"
+}, {
+"args": [],
+"method": &"deal_damage"
+}, {
+"args": [],
+"method": &"deal_damage"
+}, {
+"args": [],
+"method": &"deal_damage"
+}, {
+"args": [],
+"method": &"deal_damage"
+}, {
+"args": [],
+"method": &"deal_damage"
+}, {
+"args": [],
+"method": &"deal_damage"
+}, {
+"args": [],
+"method": &"deal_damage"
+}, {
+"args": [],
+"method": &"deal_damage"
+}, {
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_wl63r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("imagens/Magic03:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("imagens:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("imagens/Light03:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.345098, 0.286275, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("imagens/raio do efeito:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.872665]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("imagens/Light03:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.5, 1.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_21kfu"]
+_data = {
+"Basica": SubResource("Animation_5n3vf"),
+"RESET": SubResource("Animation_wl63r")
+}
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_tfqdi"]
+blend_mode = 1
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f0lsi"]
+radius = 210.998
+
+[node name="Magic_circulo" type="Node2D"]
+scale = Vector2(1.2, 1.2)
+script = ExtResource("1_n247d")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_21kfu")
+}
+autoplay = "Basica"
+speed_scale = 1.5
+
+[node name="imagens" type="Node2D" parent="."]
+modulate = Color(0.423529, 0.352941, 1, 1)
+rotation = -2.80723
+scale = Vector2(1e-05, 1e-05)
+
+[node name="raio do efeito" type="Sprite2D" parent="imagens"]
+material = SubResource("CanvasItemMaterial_tfqdi")
+rotation = 0.872665
+texture = ExtResource("1_30ggm")
+
+[node name="Light03" type="Sprite2D" parent="imagens"]
+modulate = Color(0.345098, 0.286275, 1, 0)
+material = SubResource("CanvasItemMaterial_tfqdi")
+rotation = 2.80723
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_00van")
+
+[node name="Magic03" type="Sprite2D" parent="imagens"]
+material = SubResource("CanvasItemMaterial_tfqdi")
+texture = ExtResource("3_7km4j")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_f0lsi")
+debug_color = Color(0.996078, 0, 0.196078, 0)

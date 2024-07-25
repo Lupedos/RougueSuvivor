@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0n4qgilllenr"]
+
+[ext_resource type="PackedScene" uid="uid://b6upv68ug6jvd" path="res://Prefab/player.tscn" id="1_2r6y2"]
+[ext_resource type="PackedScene" uid="uid://cqg1eyfodagx5" path="res://Prefab Inimigos/AnaoBomba_Prefab.tscn" id="4_xqhbk"]
+[ext_resource type="PackedScene" uid="uid://2se5wo7enyw8" path="res://Prefab/Carne_Prefab.tscn" id="5_40rtk"]
+[ext_resource type="PackedScene" uid="uid://bwdc2djwysk7y" path="res://Mobspawner.tscn" id="6_swu1b"]
+
+[node name="Mundo" type="Node2D" groups=["Inimigos"]]
+
+[node name="Player" parent="." instance=ExtResource("1_2r6y2")]
+position = Vector2(458, 316)
+
+[node name="CarnePrefab" parent="." instance=ExtResource("5_40rtk")]
+position = Vector2(684, 174)
+
+[node name="Mobspwaner" parent="." instance=ExtResource("6_swu1b")]
+
+[node name="GoblinPrefab" parent="." instance=ExtResource("4_xqhbk")]
+position = Vector2(565, 347)
+
+[node name="GoblinPrefab2" parent="." instance=ExtResource("4_xqhbk")]
+position = Vector2(373, 297)

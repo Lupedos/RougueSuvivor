@@ -1,0 +1,80 @@
+[gd_scene load_steps=12 format=3 uid="uid://2se5wo7enyw8"]
+
+[ext_resource type="Texture2D" uid="uid://dltwk2up7ilyo" path="res://addons/Tiny Swords (Update 010)/Resources/Resources/M_Spawn.png" id="1_bdb4g"]
+[ext_resource type="Script" path="res://Prefab/CuraScript.gd" id="1_vw67c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tg2ok"]
+atlas = ExtResource("1_bdb4g")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mue6w"]
+atlas = ExtResource("1_bdb4g")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_slo7u"]
+atlas = ExtResource("1_bdb4g")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i52x1"]
+atlas = ExtResource("1_bdb4g")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oh1q5"]
+atlas = ExtResource("1_bdb4g")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wnfq"]
+atlas = ExtResource("1_bdb4g")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tgfh4"]
+atlas = ExtResource("1_bdb4g")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_03mob"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tg2ok")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mue6w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_slo7u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i52x1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oh1q5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wnfq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tgfh4")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gtrqg"]
+radius = 25.0799
+
+[node name="CarnePrefab" type="Node2D"]
+script = ExtResource("1_vw67c")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_03mob")
+autoplay = "default"
+frame = 6
+frame_progress = 1.0
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2, 14)
+shape = SubResource("CircleShape2D_gtrqg")
+debug_color = Color(0.926672, 3.72532e-05, 0.671511, 0.42)
