@@ -35,6 +35,7 @@ signal dinheiro_coletado(value: int)
 
 func _ready():
 	GameManager.player = self
+	dinheiro_coletado.connect(func(value: int): GameManager.dinheiro_counter += 1)
 
 func _process(delta: float) -> void:
 	GameManager.player_position = position
@@ -177,12 +178,13 @@ func damage(amount: int) -> void:
 		die()
 		
 func die() -> void:
-		if morte_prefab:
-			var morte_objeto = morte_prefab.instantiate()
-			morte_objeto.position = position
-			get_parent().add_child(morte_objeto)
-			
-		queue_free()
+	GameManager.end_game()
+	if morte_prefab:
+		var morte_objeto = morte_prefab.instantiate()
+		morte_objeto.position = position
+		get_parent().add_child(morte_objeto)
+	
+	queue_free()
 
 func cura(amount: int) -> int:
 	vida += amount

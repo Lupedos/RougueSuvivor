@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://cqg1eyfodagx5"]
+[gd_scene load_steps=15 format=3 uid="uid://cqg1eyfodagx5"]
 
 [ext_resource type="Script" path="res://Scripts/inimigoScript.gd" id="1_tfkmn"]
-[ext_resource type="PackedScene" uid="uid://b28pooi1q1jjo" path="res://Prefab/Caveira.tscn" id="2_xylew"]
+[ext_resource type="PackedScene" uid="uid://b28pooi1q1jjo" path="res://Prefab objetos/Caveira.tscn" id="2_xylew"]
+[ext_resource type="PackedScene" uid="uid://chmvi27h8kmdj" path="res://Prefab objetos/TNT_prefab.tscn" id="3_5n6ue"]
 [ext_resource type="Texture2D" uid="uid://bxges1t1bbw82" path="res://addons/Tiny Swords (Update 010)/Factions/Knights/Troops/Pawn/Purple/Pawn_Purple.png" id="3_txpsn"]
 [ext_resource type="Script" path="res://Scripts/guerrerosIA.gd" id="4_5wmlh"]
 [ext_resource type="Texture2D" uid="uid://dm6icgxssxvbn" path="res://addons/Tiny Swords (Update 010)/Factions/Goblins/Troops/Barrel/Purple/Barrel_Purple.png" id="5_nwv48"]
@@ -65,6 +66,8 @@ motion_mode = 1
 script = ExtResource("1_tfkmn")
 vida = 5
 morte_prefab = ExtResource("2_xylew")
+drop_chance = 100.0
+drop_itens = Array[PackedScene]([ExtResource("3_5n6ue")])
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_6ce7h")

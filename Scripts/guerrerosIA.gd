@@ -13,6 +13,7 @@ func _ready():
 	pass
 	
 func _physics_process(delta: float) -> void:
+	if GameManager.is_game_over: return
 	var player_position = GameManager.player_position
 	var differnce = player_position - enemy.position
 	var input_vector = differnce.normalized()

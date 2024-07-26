@@ -11,5 +11,6 @@ func deal_damage():
 		if body.is_in_group("Inimigos"):
 			var enemy: Inimigo = body
 			enemy.damage(damage)
+		
 	
 

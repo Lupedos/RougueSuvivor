@@ -7,17 +7,20 @@
 
 [sub_resource type="Curve2D" id="Curve2D_w4rh2"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -220, -112, 0, 0, 0, 0, 1414, -107, 0, 0, 0, 0, 1424, 830, 0, 0, 0, 0, -251, 820, 0, 0, 0, 0, -217, -109)
+"points": PackedVector2Array(0, 0, 0, 0, -220, -112, 0, 0, 0, 0, 1057.95, -129.477, 0, 0, 0, 0, 1414, -107, 0, 0, 0, 0, 1424, 830, 0, 0, 0, 0, -251, 820, 0, 0, 0, 0, -217, -109)
 }
-point_count = 5
+point_count = 6
 
 [node name="Mobspwaner" type="Node2D"]
+position = Vector2(-4, -98)
+scale = Vector2(2, 2)
 script = ExtResource("1_fxqrd")
 monsters = Array[PackedScene]([ExtResource("2_texf8"), ExtResource("3_sifxa"), ExtResource("4_65y3n")])
 
 [node name="Path2D" type="Path2D" parent="."]
+position = Vector2(-494, -300)
 curve = SubResource("Curve2D_w4rh2")
 
 [node name="follow" type="PathFollow2D" parent="Path2D"]
 position = Vector2(-220, -112)
-rotation = 0.00305997
+rotation = -0.0136746

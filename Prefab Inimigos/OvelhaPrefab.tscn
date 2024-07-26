@@ -1,9 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://dgepr0x1yk1js"]
+[gd_scene load_steps=15 format=3 uid="uid://dgepr0x1yk1js"]
 
 [ext_resource type="Script" path="res://Scripts/inimigoScript.gd" id="1_wajia"]
-[ext_resource type="PackedScene" uid="uid://b28pooi1q1jjo" path="res://Prefab/Caveira.tscn" id="2_ely8l"]
+[ext_resource type="PackedScene" uid="uid://b28pooi1q1jjo" path="res://Prefab objetos/Caveira.tscn" id="2_ely8l"]
+[ext_resource type="PackedScene" uid="uid://blmsaktfuwlsy" path="res://Prefab objetos/Dinheiro_prefab.tscn" id="3_62k76"]
 [ext_resource type="Texture2D" uid="uid://bww8wgqq7kcqp" path="res://addons/Tiny Swords (Update 010)/Resources/Sheep/HappySheep_Bouncing.png" id="3_dgvx5"]
 [ext_resource type="Script" path="res://Scripts/guerrerosIA.gd" id="4_mavth"]
+[ext_resource type="PackedScene" uid="uid://2se5wo7enyw8" path="res://Prefab objetos/Carne_Prefab.tscn" id="4_v3lsu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f47i0"]
 atlas = ExtResource("3_dgvx5")
@@ -64,6 +66,8 @@ motion_mode = 1
 script = ExtResource("1_wajia")
 vida = 3
 morte_prefab = ExtResource("2_ely8l")
+drop_itens = Array[PackedScene]([ExtResource("3_62k76"), ExtResource("4_v3lsu")])
+drop_chances = Array[float]([0.2, 0.1])
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_6ce7h")

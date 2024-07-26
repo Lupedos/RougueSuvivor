@@ -1,9 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://slg2nkv3aqq"]
+[gd_scene load_steps=15 format=3 uid="uid://slg2nkv3aqq"]
 
 [ext_resource type="Script" path="res://Scripts/inimigoScript.gd" id="1_ptmq4"]
 [ext_resource type="Texture2D" uid="uid://8bc1cj0utxuy" path="res://addons/Tiny Swords (Update 010)/Factions/Goblins/Troops/Torch/Purple/Torch_Purple.png" id="1_truix"]
-[ext_resource type="PackedScene" uid="uid://b28pooi1q1jjo" path="res://Prefab/Caveira.tscn" id="2_2dfvp"]
+[ext_resource type="PackedScene" uid="uid://b28pooi1q1jjo" path="res://Prefab objetos/Caveira.tscn" id="2_2dfvp"]
+[ext_resource type="PackedScene" uid="uid://blmsaktfuwlsy" path="res://Prefab objetos/Dinheiro_prefab.tscn" id="3_gb05y"]
 [ext_resource type="Script" path="res://Scripts/guerrerosIA.gd" id="4_kkt2p"]
+[ext_resource type="PackedScene" uid="uid://2se5wo7enyw8" path="res://Prefab objetos/Carne_Prefab.tscn" id="4_n07tg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1ounx"]
 atlas = ExtResource("1_truix")
@@ -63,6 +65,9 @@ height = 60.0
 motion_mode = 1
 script = ExtResource("1_ptmq4")
 morte_prefab = ExtResource("2_2dfvp")
+drop_chance = 5.0
+drop_itens = Array[PackedScene]([ExtResource("3_gb05y"), ExtResource("4_n07tg")])
+drop_chances = Array[float]([0.5, 0.2])
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_6ce7h")

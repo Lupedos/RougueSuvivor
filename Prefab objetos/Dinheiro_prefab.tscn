@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://blmsaktfuwlsy"]
 
-[ext_resource type="Script" path="res://Prefab/Dinheiro_Script.gd" id="1_t1075"]
+[ext_resource type="Script" path="res://Scripts/Dinheiro_Script.gd" id="1_t1075"]
 [ext_resource type="Texture2D" uid="uid://52qtoxm224yx" path="res://addons/Tiny Swords (Update 010)/Resources/Resources/G_Spawn.png" id="1_x5b1p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_os1we"]

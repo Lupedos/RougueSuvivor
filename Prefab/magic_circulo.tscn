@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://dn353qij3g8kj"]
 
 [ext_resource type="Texture2D" uid="uid://clgffrag8a3qe" path="res://addons/PNG (Transparent)/circle_03.png" id="1_30ggm"]
-[ext_resource type="Script" path="res://magic_circuloScript.gd" id="1_n247d"]
+[ext_resource type="Script" path="res://Scripts/magic_circuloScript.gd" id="1_n247d"]
 [ext_resource type="Texture2D" uid="uid://bkoq8c41twx1y" path="res://addons/PNG (Transparent)/light_03.png" id="2_00van"]
 [ext_resource type="Texture2D" uid="uid://banp62epksonf" path="res://addons/PNG (Transparent)/magic_03.png" id="3_7km4j"]
 
