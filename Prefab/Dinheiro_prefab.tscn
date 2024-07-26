@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://blmsaktfuwlsy"]
+[gd_scene load_steps=12 format=3 uid="uid://blmsaktfuwlsy"]
 
+[ext_resource type="Script" path="res://Prefab/Dinheiro_Script.gd" id="1_t1075"]
 [ext_resource type="Texture2D" uid="uid://52qtoxm224yx" path="res://addons/Tiny Swords (Update 010)/Resources/Resources/G_Spawn.png" id="1_x5b1p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_os1we"]
@@ -59,10 +60,11 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_me7f0"]
-radius = 28.0179
+[sub_resource type="CircleShape2D" id="CircleShape2D_2kemf"]
+radius = 25.02
 
-[node name="DinheiroPrefab" type="StaticBody2D"]
+[node name="DinheiroPrefab" type="Node2D"]
+script = ExtResource("1_t1075")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_vmtmm")
@@ -70,7 +72,9 @@ autoplay = "default"
 frame = 6
 frame_progress = 1.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(5, 12)
-shape = SubResource("CircleShape2D_me7f0")
-debug_color = Color(0.8, 1, 0, 0.419608)
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(7, 9)
+shape = SubResource("CircleShape2D_2kemf")
+debug_color = Color(0.12549, 0.647059, 0, 0.215686)

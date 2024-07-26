@@ -86,3 +86,6 @@ position = Vector2(2, -56)
 texture = ExtResource("5_nwv48")
 hframes = 6
 vframes = 6
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, -21)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b6upv68ug6jvd"]
+[gd_scene load_steps=20 format=3 uid="uid://b6upv68ug6jvd"]
 
 [ext_resource type="Texture2D" uid="uid://dqgwdha0dych4" path="res://addons/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Red/Warrior_Red.png" id="1_pxnu7"]
 [ext_resource type="Script" path="res://Prefab/player.gd" id="1_xbf2k"]
@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://b28pooi1q1jjo" path="res://Prefab/Caveira.tscn" id="2_ewyxn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6wfvd"]
-radius = 20.0
-height = 60.0
+radius = 11.0
+height = 22.0
 
 [sub_resource type="Animation" id="Animation_01xtg"]
 length = 0.001
@@ -205,9 +205,16 @@ radius = 110.018
 [sub_resource type="CircleShape2D" id="CircleShape2D_tshex"]
 radius = 37.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_enkp0"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0mv31"]
+bg_color = Color(1, 0, 0, 1)
+
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 position = Vector2(298, 239)
 script = ExtResource("1_xbf2k")
+DanoEspada = 4
 magia_scene = ExtResource("2_80lwq")
 morte_prefab = ExtResource("2_ewyxn")
 
@@ -218,7 +225,7 @@ hframes = 6
 vframes = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -27)
+position = Vector2(0, -9)
 shape = SubResource("CapsuleShape2D_6wfvd")
 debug_color = Color(0, 0.6, 0.701961, 0.12549)
 
@@ -240,3 +247,14 @@ debug_color = Color(0, 0.635294, 0.403922, 0)
 position = Vector2(-1, -33)
 shape = SubResource("CircleShape2D_tshex")
 debug_color = Color(0.85098, 0, 0.196078, 0.105882)
+
+[node name="BarradeVida" type="ProgressBar" parent="."]
+offset_left = -34.0
+offset_top = 5.0
+offset_right = 34.0
+offset_bottom = 17.0
+theme_override_styles/background = SubResource("StyleBoxFlat_enkp0")
+theme_override_styles/fill = SubResource("StyleBoxFlat_0mv31")
+value = 50.0
+rounded = true
+show_percentage = false

@@ -21,6 +21,7 @@ extends CharacterBody2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var Sword_area: Area2D = $EspadaColisao
 @onready var HitBox_area: Area2D = $Hitbox
+@onready var barraVida: ProgressBar = $BarradeVida
 
 var input_vector: Vector2 = Vector2(0, 0)
 var is_running: bool = false
@@ -29,6 +30,11 @@ var is_atacking: bool = false
 var atack_cooldown: float = 0.0
 var hitBox_cooldown: float = 0.0
 var magic_cooldown: float = 0.0
+
+signal dinheiro_coletado(value: int)
+
+func _ready():
+	GameManager.player = self
 
 func _process(delta: float) -> void:
 	GameManager.player_position = position
@@ -41,6 +47,14 @@ func _process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("atack"):
 		atack()
+	barraVida.max_value = maxVida
+	barraVida.value = vida
+	
+	if vida == maxVida:
+		barraVida.visible = false
+	else:
+		barraVida.visible = true
+	
 
 func _physics_process(delta: float) -> void:
 	# modificar velocidade

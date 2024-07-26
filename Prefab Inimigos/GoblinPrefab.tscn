@@ -77,3 +77,6 @@ debug_color = Color(0, 0.6, 0.701961, 0.227451)
 
 [node name="SeguirJogador" type="Node" parent="."]
 script = ExtResource("4_kkt2p")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(0, -21)
